@@ -26,7 +26,7 @@ export const Footer = () => {
             </p>
             <div className="flex items-center gap-2 text-cyan-100/80">
               <MapPin className="w-5 h-5 text-cyan-400" />
-              Location details will be updated soon
+              IIITDM Kancheepuram, Melakottaiyur, Chennai 600127 (Off Vandalur-Kelambakkam Road)
             </div>
           </div>
 

@@ -6,12 +6,12 @@ export const About = () => {
   const features = [
     {
       icon: <Trophy className="w-8 h-8" />,
-      title: '₹5,00,000 Prize Pool',
+      title: 'Prize Pool TBA',
       description: 'Compete for exciting prizes and recognition'
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: '1000+ Participants',
+      title: 'Offline Hackthon',
       description: 'Connect with fellow developers and innovators'
     },
     {

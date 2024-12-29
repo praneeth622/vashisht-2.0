@@ -9,6 +9,7 @@ import { Rules } from './components/Rules';
 import { Prizes } from './components/Prizes';
 import { Footer } from './components/Footer';
 import './styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Rules />
       <Prizes />
       <Footer />
+      <Analytics/>
     </div>
   );
 }

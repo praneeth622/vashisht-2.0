@@ -6,7 +6,7 @@ const stats = [
   { icon: <Users />, value: "1,100+", label: "Participants" },
   { icon: <Clock />, value: "48hrs", label: "Duration" },
   { icon: <Code />, value: "250+", label: "Projects" },
-  { icon: <Trophy />, value: "₹2L+", label: "Prize Pool" }
+  { icon: <Trophy />, value: "₹1L+", label: "Prize Pool" }
 ];
 
 export const PreviousAchievements = () => {

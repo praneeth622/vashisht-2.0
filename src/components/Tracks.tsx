@@ -10,13 +10,13 @@ const tracks = [
   },
   {
     icon: <Globe className="w-12 h-12" />,
-    title: 'Web Development',
+    title: 'Web and Mobile Development',
     description: 'Create innovative web applications and services'
   },
   {
     icon: <Smartphone className="w-12 h-12" />,
-    title: 'Mobile Development',
-    description: 'Build next-gen mobile experiences'
+    title: 'Computer Vision',
+    description: ' Creating innovative solutions using image and video data.'
   },
   {
     icon: <Code2 className="w-12 h-12" />,

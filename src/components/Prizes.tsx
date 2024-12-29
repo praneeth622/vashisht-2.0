@@ -5,19 +5,19 @@ import { Trophy, Award, Medal } from 'lucide-react';
 const prizes = [
   {
     place: '1st',
-    amount: '₹2,00,000',
+    amount: 'TBA',
     icon: <Trophy className="w-12 h-12" />,
     color: 'from-yellow-400 to-yellow-600'
   },
   {
     place: '2nd',
-    amount: '₹1,50,000',
+    amount: 'TBA',
     icon: <Award className="w-12 h-12" />,
     color: 'from-gray-300 to-gray-500'
   },
   {
     place: '3rd',
-    amount: '₹75,000',
+    amount: 'TBA',
     icon: <Medal className="w-12 h-12" />,
     color: 'from-amber-600 to-amber-800'
   }
