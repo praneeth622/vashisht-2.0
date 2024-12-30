@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Twitter, Instagram, Mail, MapPin } from "lucide-react";
+import { Github, Instagram, Mail, MapPin, Linkedin } from "lucide-react";
 
 const socialLinks = [
-  { icon: <Github className="w-5 h-5" />, href: "#", label: "GitHub" },
-  { icon: <Twitter className="w-5 h-5" />, href: "#", label: "Twitter" },
-  { icon: <Instagram className="w-5 h-5" />, href: "#", label: "Instagram" },
-  { icon: <Mail className="w-5 h-5" />, href: "#", label: "Email" },
+  { icon: <Github className="w-5 h-5" />, href: "https://github.com/DevClubIIITDM", label: "GitHub" },
+  { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/company/developersclub-iiitdm-kancheepuram", label: "LinkedIn" },
+  { icon: <Instagram className="w-5 h-5" />, href: "https://www.instagram.com/dev.club.iiitdm", label: "Instagram" },
+  { icon: <Mail className="w-5 h-5" />, href: "mailto:devclub@iiitdm.ac.in'", label: "Email" },
 ];
 
 export const Footer = () => {
