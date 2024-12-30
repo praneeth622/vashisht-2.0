@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Clock, Code, Trophy } from 'lucide-react';
+import { Users, Clock, Code, Trophy, ExternalLink } from 'lucide-react';
 
 const stats = [
   { icon: <Users />, value: "1,100+", label: "Participants" },
   { icon: <Clock />, value: "48hrs", label: "Duration" },
   { icon: <Code />, value: "250+", label: "Projects" },
-  { icon: <Trophy />, value: "₹1L+", label: "Prize Pool" }
+  { icon: <Trophy />, value: "₹2L+", label: "Prize Pool" }
 ];
 
 export const PreviousAchievements = () => {
@@ -27,7 +27,7 @@ export const PreviousAchievements = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -58,6 +58,24 @@ export const PreviousAchievements = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center"
+        >
+          <motion.a
+            href="https://unstop.com/hackathons/hackathon-vashisht-2024-nexusaeon-indian-institute-of-information-technology-design-and-manufacturing-iiitdm--877136"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all"
+          >
+            View on Unstop
+            <ExternalLink className="w-4 h-4" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
