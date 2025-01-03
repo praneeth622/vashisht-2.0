@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Gamepad2, Sparkles } from "lucide-react";
+import { useState } from "react";
 import { Navigation } from "./header/Navigation";
 import { GlowingButton } from "./header/GlowingButton";
 import { Timer } from "./Timer";
@@ -9,12 +10,17 @@ export const Header = () => {
   const opacity = useTransform(scrollY, [0, 200], [1, 0]);
   const scale = useTransform(scrollY, [0, 200], [1, 0.95]);
 
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const openDialog = () => setIsDialogOpen(true);
+  const closeDialog = () => setIsDialogOpen(false);
 
   return (
     <header className="relative min-h-screen overflow-hidden">
@@ -38,10 +44,7 @@ export const Header = () => {
       {/* Hero Section */}
       <div className="relative container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-16 sm:pb-20 min-h-screen flex flex-col items-center justify-center text-center space-y-8 sm:space-y-10">
         {/* Icons */}
-        <motion.div
-          style={{ opacity, scale }}
-          className="space-y-6 sm:space-y-8"
-        >
+        <motion.div style={{ opacity, scale }} className="space-y-6 sm:space-y-8">
           <div className="flex justify-center gap-4 mb-4 sm:mb-6">
             <motion.div
               animate={{ rotate: 360 }}
@@ -59,7 +62,6 @@ export const Header = () => {
 
           {/* Title Section */}
           <div className="space-y-4 sm:space-y-6">
-            {/* Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -69,7 +71,6 @@ export const Header = () => {
               <div className="block sm:inline">Hackathon 2.0</div>
             </motion.h1>
 
-            {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -81,7 +82,6 @@ export const Header = () => {
             </motion.p>
           </div>
 
-          {/* Timer Section */}
           <div>
             <Timer />
           </div>
@@ -92,11 +92,26 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <GlowingButton onClick={() => scrollToSection("registration")}>
-              Register Now
-            </GlowingButton>
+            <GlowingButton onClick={openDialog}>Register Now</GlowingButton>
           </motion.div>
         </motion.div>
+
+        {/* Dialog */}
+        {isDialogOpen && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black/80 backdrop-blur-md z-50">
+            <div className="bg-gray-900 border border-purple-500 rounded-lg p-6 max-w-sm mx-auto text-center">
+              <h2 className="text-xl font-bold text-white pixel-font mb-4">
+                Registrations are opening soon!
+              </h2>
+              <button
+                onClick={closeDialog}
+                className="mt-4 bg-purple-600 hover:bg-purple-500 text-white py-2 px-4 rounded pixel-font"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Scroll Indicator */}
         <motion.div

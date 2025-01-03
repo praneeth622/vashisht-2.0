@@ -1,37 +1,46 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { SponsorTier } from './sponsor/SponsorTier';
 import { SponsorUs } from './sponsor/SponsorUs';
 import { Clock } from 'lucide-react';
 import { SponsorCard } from './sponsor/SponsorCard';
-import image from './images/360flyingclub.png'
-import Spicmacay from './images/spicmacay.png'
-import vyzasolutions from './images/vyza solutions.png'
+import CodeChef from './images/CodeChef.jpg'
+import contentstack from './images/contentstack.png'
+import cigniti from './images/cigniti.png'
+import Unstop from './images/Unstop.png'
+import APTOS from './images/APTOS.png'
+import Devfolio from './images/Devfolio.png'
 import OSSEB from './images/OSSEB.png'
-import dreambright from './images/dreambright.jpg'
 import lightcast from './images/lightcast.jpg'
 import sriaalaya from './images/sriaalaya.jpg'
 
 const previousSponsors = [
     {
-      name: '360 Flying Club',
-      logo: image
+      name: 'APTOS',
+      logo: APTOS
     },
     {
-      name: 'Spicmacay',
-      logo: Spicmacay
+      name: 'Cigniti',
+      logo: cigniti
     },
     {
-      name: 'Vyza Solutions',
-      logo: vyzasolutions
+      name: 'Content Stack',
+      logo: contentstack
+    },
+    {
+      name: 'Unstop',
+      logo: Unstop
+    },
+    {
+      name: 'Code Chef',
+      logo: CodeChef
+    },
+    {
+      name: 'Devfolio',
+      logo: Devfolio
     },
     {
       name: 'OSSEB',
       logo: OSSEB
-    },
-    {
-      name: 'Dream bright',
-      logo: dreambright
     },
     {
       name: 'Light Cast',
@@ -111,7 +120,7 @@ const previousSponsors = [
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mb-6 pixel-font">
+            <h2 className="text-4xl pt-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mb-6 pixel-font">
               Vashisht 2.0 Sponsors
             </h2>
             
@@ -154,7 +163,7 @@ const previousSponsors = [
               Partner with Vashisht 2.0 to connect with exceptional talent and support the future of technology.
             </p>
             
-            <SponsorUs formLink="https://forms.gle/your-sponsor-form-link" />
+            <SponsorUs formLink="https://drive.google.com/file/d/1PHLdbIFTqWqN_5Fm01G8GUCOPK9BZt5B/" />
           </motion.div>
         </div>
       </section>
