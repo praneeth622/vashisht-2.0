@@ -6,7 +6,7 @@ import { SponsorCard } from './sponsor/SponsorCard';
 import CodeChef from './images/CodeChef.jpg'
 import contentstack from './images/contentstack.png'
 import cigniti from './images/cigniti.png'
-import Unstop from './images/Unstop.png'
+import Unstop from './images/unstop.png'
 import APTOS from './images/APTOS.png'
 import Devfolio from './images/Devfolio.png'
 import OSSEB from './images/OSSEB.png'
